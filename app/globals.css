@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0D0F14;
+  --surface: #131720;
+  --card: #181D27;
+  --border: #1E2535;
+  --accent: #3B82F6;
+  --accent-dim: #1D4ED8;
+  --cyan: #22D3EE;
+  --muted: #4B5675;
+  --text: #E2E8F0;
+  --text-dim: #64748B;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--accent); color: #fff; }
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--surface); }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
+
+.section-fade { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.section-fade.visible { opacity: 1; transform: translateY(0); }
+
+.tag {
+  display: inline-flex; align-items: center; padding: 3px 10px;
+  border: 1px solid var(--border); border-radius: 2px;
+  font-size: 11px; letter-spacing: 0.06em; color: var(--text-dim);
+  background: var(--surface); transition: all 0.2s ease;
+  font-family: 'JetBrains Mono', monospace;
+}
+.tag:hover { border-color: var(--accent); color: var(--accent); }
+
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 11px 26px; background: var(--accent); color: #fff;
+  font-size: 13px; font-weight: 500; letter-spacing: 0.04em;
+  border: 1px solid var(--accent); border-radius: 2px;
+  transition: all 0.25s ease; cursor: pointer; text-decoration: none;
+}
+.btn-primary:hover { background: var(--accent-dim); border-color: var(--accent-dim); }
+
+.btn-outline {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 11px 26px; background: transparent; color: var(--text);
+  font-size: 13px; font-weight: 500; letter-spacing: 0.04em;
+  border: 1px solid var(--border); border-radius: 2px;
+  transition: all 0.25s ease; cursor: pointer; text-decoration: none;
+}
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+.label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.1em; color: var(--accent); text-transform: uppercase;
+}
+.divider-accent { width: 36px; height: 2px; background: var(--accent); margin: 16px 0; }
