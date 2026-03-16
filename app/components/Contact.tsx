@@ -19,9 +19,9 @@ export default function Contact() {
   }, [])
 
   const socials = [
-    { label: 'GitHub', handle: '@thulio-borba', href: 'https://github.com' },
+    { label: 'GitHub', handle: '@borbathulio', href: 'https://github.com' },
     { label: 'LinkedIn', handle: 'Thúlio Borba', href: 'https://linkedin.com' },
-    { label: 'Email', handle: 'thulio@email.com', href: 'mailto:thulio@email.com' },
+    { label: 'Email', handle: 'borbathulio@gmail.com', href: 'mailto:borbathulio@gmail.com' },
   ]
 
   return (

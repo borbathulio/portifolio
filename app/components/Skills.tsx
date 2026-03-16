@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react'
 
 const skills = [
   { category: 'Core', items: ['HTML5', 'CSS3', 'JavaScript', 'TypeScript'] },
-  { category: 'Frameworks', items: ['React 19', 'Next.js 15', 'Vue.js', 'Astro'] },
+  { category: 'Frameworks', items: ['react', 'Next.js', 'Vue.js', 'Astro'] },
   { category: 'Styling', items: ['Tailwind CSS', 'Styled Components', 'Framer Motion', 'Sass'] },
   { category: 'State & Forms', items: ['Valtio', 'Zustand', 'React Hook Form', 'Zod'] },
   { category: 'Performance', items: ['Web Vitals', 'Lighthouse', 'A11y', 'SEO técnico'] },
@@ -62,7 +62,7 @@ export default function Skills() {
 
         <div className="reveal section-fade" style={{ marginTop:'40px', paddingTop:'24px', borderTop:'1px solid var(--border)', display:'flex', flexWrap:'wrap', gap:'16px', alignItems:'center' }}>
           <span style={{ fontFamily:'var(--font-mono)', fontSize:'11px', color:'var(--text-dim)', letterSpacing:'0.08em' }}>sempre aprendendo //</span>
-          {['React 19 RC', 'Next.js 15', 'AI/LLM APIs', 'Web Components'].map((item) => (
+          {['react RC', 'Next.js', 'AI/LLM APIs', 'Web Components'].map((item) => (
             <span key={item} style={{ fontFamily:'var(--font-mono)', fontSize:'11px', color:'var(--muted)', letterSpacing:'0.05em' }}>{item}</span>
           ))}
         </div>

@@ -7,7 +7,7 @@ const projects = [
     title: 'Rede SOMOS',
     subtitle: 'Ecossistema Digital de Saúde — Healthtech',
     description: 'Plataforma Healthtech de alta complexidade conectando pacientes, profissionais e clínicas. Sistema com Prontuário Eletrônico do Paciente (PEP) unificado, Prontuário Afetivo para suporte a pacientes atípicos (TEA), telemedicina, rede social de saúde e dashboard de health tracking com sinais vitais em tempo real.',
-    tags: ['React 19', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Valtio', 'Zod', 'React Hook Form', 'Chart.js'],
+    tags: ['react', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Valtio', 'Zod', 'React Hook Form', 'Chart.js'],
     type: 'Healthtech',
     highlights: ['Prontuário Eletrônico (PEP)', 'LGPD / Controle granular de dados', 'Telemedicina', 'Health Tracking'],
     link: '#',
