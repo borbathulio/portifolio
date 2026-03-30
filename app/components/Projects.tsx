@@ -7,6 +7,7 @@ const projects = [
     title: 'Rede SOMOS',
     subtitle: 'Ecossistema Digital de Saúde — Healthtech',
     description: 'Plataforma Healthtech de alta complexidade conectando pacientes, profissionais e clínicas. Sistema com Prontuário Eletrônico do Paciente (PEP) unificado, Prontuário Afetivo para suporte a pacientes atípicos (TEA), telemedicina, rede social de saúde e dashboard de health tracking com sinais vitais em tempo real.',
+    liveUrls: [] as { label: string; url: string }[],
     tags: ['react', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Valtio', 'Zod', 'React Hook Form', 'Chart.js'],
     type: 'Healthtech',
     highlights: ['Prontuário Eletrônico (PEP)', 'LGPD / Controle granular de dados', 'Telemedicina', 'Health Tracking'],
@@ -18,9 +19,28 @@ const projects = [
     title: 'Grupo Amarante',
     subtitle: 'Landing Pages de Alta Conversão',
     description: 'Desenvolvimento de landing pages para o Grupo Amarante, com foco em performance, SEO técnico e alta conversão. Interfaces responsivas e otimizadas para campanhas de marketing digital, garantindo carregamento rápido e experiência fluida em todos os dispositivos.',
+    liveUrls: [
+      { label: 'Salinas', url: 'https://www.salinas.com.br/pt' },
+      { label: 'Salinas Maragogi - Carnaval', url: 'https://www.salinas.com.br/pt/maragogi/carnaval/' },
+      { label: 'Salinas Maragogi - Consumidor', url: 'https://www.salinas.com.br/pt/maragogi/semana-do-consumidor/' },
+      { label: 'Salinas Maragogi - Festas Juninas', url: 'https://www.salinas.com.br/pt/maragogi/festas-juninas/' },
+      { label: 'Salinas Maragogi - Black Friday', url: 'https://www.salinas.com.br/pt/maragogi/blackfriday/' },
+      { label: 'Salinas Maragogi - Natal', url: 'https://www.salinas.com.br/pt/maragogi/natal/' },
+      { label: 'Salinas Maceió - Carnaval', url: 'https://www.salinas.com.br/pt/maceio/carnaval/' },
+      { label: 'Salinas Maceió - Consumidor', url: 'https://www.salinas.com.br/pt/maceio/semana-do-consumidor/' },
+      { label: 'Salinas Maceió - Festas Juninas', url: 'https://www.salinas.com.br/pt/maceio/festas-juninas/' },
+      { label: 'Salinas Maceió - Black Friday', url: 'https://www.salinas.com.br/pt/maceio/blackfriday/' },
+      { label: 'Salinas Maceió - Natal', url: 'https://www.salinas.com.br/pt/maceio/natal/' },
+      { label: 'Japaratinga Resort', url: 'https://www.japaratingaresort.com.br/pt/' },
+      { label: 'Japaratinga - Carnaval', url: 'https://www.japaratingaresort.com.br/pt/carnaval/' },
+      { label: 'Japaratinga - Consumidor', url: 'https://www.japaratingaresort.com.br/pt/semana-do-consumidor/' },
+      { label: 'Japaratinga - Festas Juninas', url: 'https://www.japaratingaresort.com.br/pt/festasjuninas/' },
+      { label: 'Japaratinga - Natal', url: 'https://www.japaratingaresort.com.br/pt/natal/' },
+      { label: 'Japaratinga - Black Friday', url: 'https://www.japaratingaresort.com.br/pt/blackfriday/' },
+    ],
     tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'SEO', 'Performance'],
     type: 'Marketing',
-    highlights: ['Lighthouse 100', 'SEO técnico', 'Mobile-first', 'Alta conversão'],
+    highlights: ['SEO técnico', 'Mobile-first', 'Alta conversão'],
     link: '#',
     featured: false,
   },
@@ -86,6 +106,48 @@ export default function Projects() {
                       <p style={{ color:'var(--text-dim)', fontSize:'14px', lineHeight:1.75, maxWidth:'600px', fontWeight:300, marginBottom:'20px' }}>
                         {project.description}
                       </p>
+
+                      {project.liveUrls && project.liveUrls.length > 0 && (
+                        <div style={{ display:'flex', flexWrap:'wrap', gap:'8px', marginBottom:'24px' }}>
+                          {project.liveUrls.map((link) => (
+                            <a
+                              key={link.url}
+                              href={link.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              style={{
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                gap: '6px',
+                                fontFamily: 'var(--font-mono)',
+                                fontSize: '11px',
+                                color: 'var(--text-dim)',
+                                background: 'var(--surface)',
+                                border: '1px solid var(--border)',
+                                padding: '6px 10px',
+                                borderRadius: '2px',
+                                textDecoration: 'none',
+                                transition: 'all 0.2s ease',
+                              }}
+                              onMouseEnter={(e) => {
+                                const el = e.currentTarget as HTMLElement
+                                el.style.borderColor = 'var(--accent)'
+                                el.style.color = 'var(--accent)'
+                              }}
+                              onMouseLeave={(e) => {
+                                const el = e.currentTarget as HTMLElement
+                                el.style.borderColor = 'var(--border)'
+                                el.style.color = 'var(--text-dim)'
+                              }}
+                            >
+                              {link.label}
+                              <svg width="10" height="10" viewBox="0 0 14 14" fill="none">
+                                <path d="M3 11L11 3M5 3h6v6" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round"/>
+                              </svg>
+                            </a>
+                          ))}
+                        </div>
+                      )}
 
                       <div style={{ display:'flex', flexWrap:'wrap', gap:'8px', marginBottom:'16px' }}>
                         {project.highlights.map((h) => (

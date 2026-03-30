@@ -3,9 +3,9 @@ import { useEffect, useRef } from 'react'
 
 const skills = [
   { category: 'Core', items: ['HTML5', 'CSS3', 'JavaScript', 'TypeScript'] },
-  { category: 'Frameworks', items: ['react', 'Next.js', 'Vue.js', 'Astro'] },
+  { category: 'Frameworks', items: ['React', 'Next.js', 'Vue.js', 'Astro', 'Gatsby'] },
   { category: 'Styling', items: ['Tailwind CSS', 'Styled Components', 'Framer Motion', 'Sass'] },
-  { category: 'State & Forms', items: ['Valtio', 'Zustand', 'React Hook Form', 'Zod'] },
+  { category: 'State & Forms', items: ['Valtio', 'React Hook Form', 'Zod'] },
   { category: 'Performance', items: ['Web Vitals', 'Lighthouse', 'A11y', 'SEO técnico'] },
   { category: 'Ferramentas', items: ['Git', 'Figma', 'Vite', 'Chart.js'] },
 ]
@@ -42,7 +42,7 @@ export default function Skills() {
           </p>
         </div>
 
-        <div className="reveal section-fade" style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(260px, 1fr))', gap:'1px', background:'var(--border)' }}>
+        <div className="reveal section-fade skills-grid" style={{ display:'grid', gap:'1px', background:'var(--border)' }}>
           {skills.map((group) => (
             <div key={group.category} style={{ background:'var(--card)', padding:'24px', position:'relative', overflow:'hidden', cursor:'default' }}
               onMouseEnter={(e) => { (e.currentTarget.querySelector('.skill-line') as HTMLElement).style.transform = 'scaleX(1)' }}
@@ -57,13 +57,6 @@ export default function Skills() {
                 ))}
               </div>
             </div>
-          ))}
-        </div>
-
-        <div className="reveal section-fade" style={{ marginTop:'40px', paddingTop:'24px', borderTop:'1px solid var(--border)', display:'flex', flexWrap:'wrap', gap:'16px', alignItems:'center' }}>
-          <span style={{ fontFamily:'var(--font-mono)', fontSize:'11px', color:'var(--text-dim)', letterSpacing:'0.08em' }}>sempre aprendendo //</span>
-          {['react RC', 'Next.js', 'AI/LLM APIs', 'Web Components'].map((item) => (
-            <span key={item} style={{ fontFamily:'var(--font-mono)', fontSize:'11px', color:'var(--muted)', letterSpacing:'0.05em' }}>{item}</span>
           ))}
         </div>
       </div>

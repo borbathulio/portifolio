@@ -5,6 +5,7 @@ import About from './components/About'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
+import ThemeToggle from './components/ThemeToggle'
 
 export default function Page() {
   useEffect(() => {
@@ -28,6 +29,7 @@ export default function Page() {
 
   return (
     <main>
+      <ThemeToggle />
       <Hero />
       <About />
       <Skills />

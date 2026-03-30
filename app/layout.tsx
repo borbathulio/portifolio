@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import { Syne, Inter, JetBrains_Mono } from 'next/font/google'
+import { Space_Grotesk, Inter, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 
-const display = Syne({ subsets: ['latin'], weight: ['400','500','600','700','800'], variable: '--font-display' })
+const display = Space_Grotesk({ subsets: ['latin'], weight: ['400','500','600','700'], variable: '--font-display' })
 const body = Inter({ subsets: ['latin'], weight: ['300','400','500'], variable: '--font-body' })
 const mono = JetBrains_Mono({ subsets: ['latin'], weight: ['300','400'], variable: '--font-mono' })
 

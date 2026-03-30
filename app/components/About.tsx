@@ -31,7 +31,7 @@ export default function About() {
               <div className="w-8 h-px" style={{ background:'var(--accent)' }} />
             </div>
             <h2 className="reveal section-fade" style={{ fontFamily:'var(--font-display)', fontSize:'clamp(2rem, 4.5vw, 3.5rem)', fontWeight:700, lineHeight:1.1, letterSpacing:'-0.02em', color:'var(--text)', marginBottom:'16px' }}>
-              Code that ships.<br /><span style={{ color:'var(--accent)' }}>Design that sticks.</span>
+              Código que entrega.<br /><span style={{ color:'var(--accent)' }}>Design que fica na memória.</span>
             </h2>
             <div className="reveal section-fade divider-accent" />
             <div className="reveal section-fade space-y-4" style={{ color:'var(--text-dim)', fontSize:'15px', lineHeight:1.75, fontWeight:300 }}>
